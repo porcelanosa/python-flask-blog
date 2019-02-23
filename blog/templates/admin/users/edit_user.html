@@ -1,0 +1,33 @@
+{% extends "admin/admin_base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}
+	{% if add_department %}
+		Add Department
+	{% else %}
+		Edit Department
+	{% endif %}
+{% endblock %}
+{% block body %}
+	<div class="card">
+		<div class="card-body">
+
+			{% if add_department %}
+				<h1>Add Department</h1>
+			{% else %}
+				<h1>{{ title }}</h1>
+			{% endif %}
+			{{ wtf.form_errors(form) }}
+			<br/>
+			{{ user.avatar_image | safe }}
+			{{ user.avatar_resize("200") | safe }}
+			<img src="{{ user.avatar_path()|resize('300x300', format='jpg') }}" alt="My kittens">
+			<img src="{{ user.avatar_url() }}" alt="My kittens">
+			<br/>
+			{{ wtf.quick_form(form,
+                    form_type="horizontal",
+                    horizontal_columns=('lg', 2, 10),
+                    enctype='multipart/form-data') }}
+</div>
+		</div>
+	</div>
+{% endblock %}

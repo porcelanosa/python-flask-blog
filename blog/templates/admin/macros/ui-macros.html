@@ -1,0 +1,12 @@
+{% macro input(name, value='', type='text', size=20) -%}
+	<input type="{{ type }}" name="{{ name }}" value="{{ value|e }}" size="{{ size }}">
+{%- endmacro %}
+{########## BUTTNONS #################}
+{% macro btn(value='', url='#', class='btn-primary', size='', disabled='', icon='') -%}
+	<a type="button" class="btn {{ size }} {{ class }}" {{ disabled }} href=" {{ url }}">
+	{% if icon %}
+		<span class="{{ icon }}"></span>
+	{% endif %}
+		{{ value|e }}
+	</a>
+{%- endmacro %}

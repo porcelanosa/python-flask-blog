@@ -1,0 +1,38 @@
+{
+  "name": "remont-serv.ru",
+  "version": "1.0.0",
+  "description": "Ремонт бытовой техники",
+  "type": "project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-symbols": "^2.0.2",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.0",
+    "pump": "^3.0.0",
+    "rimraf": "^2.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

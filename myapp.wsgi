@@ -21,4 +21,4 @@ os.environ['FLASK_CONFIG'] = 'production'
 # print (os.getcwd())
 
 
-from dream_team_app.run import app as application
+from blog import app as application

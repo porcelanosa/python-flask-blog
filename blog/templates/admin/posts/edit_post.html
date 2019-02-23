@@ -1,33 +1,38 @@
 {% extends "admin/admin_base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 {% block title %}
-	{% if add_department %}
-		Add Department
+	{% if add_post %}
+		Создание поста
 	{% else %}
-		Edit Department
+		Правка поста {{ title }}
 	{% endif %}
 {% endblock %}
 {% block body %}
 	<div class="card">
-		<div class="card-body">
-
+		<div class="card-header">
 			{% if add_department %}
-				<h1>Add Department</h1>
+				<h1>Добавление поста</h1>
 			{% else %}
 				<h1>{{ title }}</h1>
 			{% endif %}
 			{{ wtf.form_errors(form) }}
-			<br/>
-			{{ user.avatar_image | safe }}
-			{{ user.avatar_resize("200") | safe }}
-			<img src="{{ user.avatar_path()|resize('300x300', format='jpg') }}" alt="My kittens">
-			<img src="{{ user.avatar_url() }}" alt="My kittens">
-			<br/>
+		</div>
+		<div class="card-body">
 			{{ wtf.quick_form(form,
                     form_type="horizontal",
                     horizontal_columns=('lg', 2, 10),
                     enctype='multipart/form-data') }}
-</div>
+			<form class="form form-horizontal" method="post" role="form">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							{{ form.title.label }}
+							{{ form.title }}
+						</div>
+					</div>
+				</div>
+			{{ form.submit(class = 'btn btn-success') }}
+			</form>
 		</div>
 	</div>
 {% endblock %}

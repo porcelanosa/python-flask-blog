@@ -30,4 +30,5 @@ migrations
 venv/
 .idea
 /venv3/
+/node_modules/
 /blog/local_config.py

@@ -32,3 +32,4 @@ venv/
 /venv3/
 /node_modules/
 /blog/local_config.py
+/package-lock.json

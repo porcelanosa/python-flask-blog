@@ -28,6 +28,7 @@ __pycache__/
 dream_team_app/instance___/
 migrations
 venv/
+newenv/
 .idea
 /venv3/
 /node_modules/

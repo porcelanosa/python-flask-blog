@@ -8,6 +8,7 @@ from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
+from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
 
 # local imports
@@ -25,6 +26,8 @@ app.config.from_object(app_config[config_name])
 app.config.from_pyfile('config.py', silent=True)
 app.config['RESIZE_URL'] = '/static/uploads/'
 app.config['RESIZE_ROOT'] = os.path.join('E:\\','FlaskAPPS','my-blog','blog','static','uploads')
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
 Bootstrap(app)
 db.init_app(app)
 resize = flask_resize.Resize(app)
@@ -64,6 +67,6 @@ def internal_server_error(error):
 def error():
     abort(500)
 
-
-if __name__ == '__main__':
-    app.run()
+#
+# if __name__ == '__main__':
+#     app.run()

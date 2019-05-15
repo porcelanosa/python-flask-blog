@@ -14,4 +14,4 @@ class PostForm(FlaskForm):
     descr = TextAreaField('Анонс', validators=[ DataRequired()])
     # avatar = FileField('Аватар', validators=[Regexp(r'^[^/\\]\.jpg$')]), [Regexp(r'^[^/\\]\.jpg$')]
     avatar = FileField('Аватар')
-    submit = SubmitField('Submit',default='class=""')
+    submit = SubmitField('Submit', default='class=""')

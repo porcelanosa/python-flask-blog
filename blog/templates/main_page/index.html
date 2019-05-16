@@ -33,7 +33,7 @@
 			socket.emit('my event', {data: 'I\'m connected!'});
 		});#}
 		$(document).ready(function() {
-			var socket = io.connect('//' + document.domain + ':' + location.port + '/websocket');
+			var socket = io.connect('//' + document.domain + ':' + location.port + '/test/websocket');
 			socket.on('my response', function(msg) {
 				$('#log').append('<p>Received: ' + msg.data + '</p>');
 			});

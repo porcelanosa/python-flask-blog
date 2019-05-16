@@ -26,7 +26,7 @@ app.config.from_object(app_config[config_name])
 app.config.from_pyfile('config.py', silent=True)
 app.config['RESIZE_URL'] = '/static/uploads/'
 # app.config['RESIZE_ROOT'] = os.path.join('E:\\','FlaskAPPS','my-blog','blog','static','uploads')
-app.config['RESIZE_ROOT'] = os.path.join('var','www','porcelanosa','data','www','blog.71b.ru','blog','static','uploads')
+app.config['RESIZE_ROOT'] = '/var/www/porcelanosa/data/www/blog.71b.ru/blog/static/uploads' #os.path.join('var','www','porcelanosa','data','www','blog.71b.ru','blog','static','uploads')
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 Bootstrap(app)
